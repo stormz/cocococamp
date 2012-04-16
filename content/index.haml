@@ -2,57 +2,104 @@
 title: Home
 ---
 
-.panel.vevent
-  %h1= site_name
-  %p.bigger
-    %span.summary Un barcamp sur la co-création, la co-conception, la co-?
+.header
+  %h1
+    %a{href:'/'}
+      %img{src: "/images/cocococamp_logo.png"}
+
+  %h4.subheader   
+    Un événement sur la co-création, la co-conception, la co-?
     le
     %abbr.dtstart{title:'2012-05-04'} 4 mai
     à
     %span.location Paris.
+    %hr
 
-- if !news.empty?
-  %h2 News
-  %ul
-    - news.each do |article|
-      %li
-        %h3
-          %a{href: article.path}= article[:title]
-        %p= snippet(article)
+.row
+  .eight.columns
+    .panel.edito
+      %h3 Le CococoCamp est bientôt là !
+      %h4.subheader Aujourd'hui de nouveaux projets, produits et services innovants se développent en faisant appel à des méthodes dites de "co-création". Impossible d'en douter, tout le monde en parle! 
+      %p Devant cette avalanche de termes plus ou moins galvaudés et au delà des "buzz words" qui émaillent le monde des affaires et de l'innovation, il est important de ne pas perdre l'essence de cette démarche. 
+      %p C'est la vocation du Co-co-co-Camp : Se retrouver pour prendre du recul et faire le point sur ces initiatives.
 
-%ul.block-grid.four-up
-  %li
-    %section
-      %h1 Sponsors
-      %p
-        %a{href:"mailto:contact@cocococamp.com"} Contactez nous
-  %li
-    %section
-      %h1 Ou ?
-      %p
-        La Cantine
-        %br
-        151 rue montmartre,
-        %br
-        passage des panoramas
-        %br
-        75002 Paris
-        %br
-        FRANCE
+      %a{class: 'big radius button nice', href:"http://barcamp.com"} Réservez votre place !
 
-  %li
-    %section
-      %h1 Organisateurs
+    %h3 Le programme
+    %h4.subheader Un programme en deux parties, des tables rondes en matiné pour faire le tour du sujet et un BarCamp dans l'après midi pour échanger.
+    %hr
+    .row
+      .six.columns
+        %h4 
+          Tables rondes
+          %span.label.green 10h-13h
+        %p Des experts et des retours d’expérience pour mieux faire le tour du sujet de la co-création et de la co-innovation
+        %ul.square
+          %li Des chercheurs abordent l’histoire, les concepts et mettent en perspectives les différentes formes decollaborations.
+          %li Des exemples et des analyses d’expériences collaboratives innovantes dans le fond et dans la forme
+          %li Des retours d’expériences de grandes entreprises sur des démarches de co-création avec des acteurs externes
+          %li Des points de vues décalés sur différentes formes de collaboration
+        %p Et un tour des plaisirs et déplaisirs du travail collaboratif
+
+      .six.columns
+        %h4 
+          BarCamp
+          %span.label.green 14h-18h
+        
+        %p Un barcamp qui permettra aux participants d’échanger de manière originale...
+        %p ... sur des exemples, des tendances, des outils et des questionnements en tous genres tournant autour des co-co-co
+
+    %h3.home Le lieu
+    %h4.subheader La Cantine par Silicon Sentier, haut lieu des événements collaboratifs pour les communautés des NTIC
+    %hr
+    <iframe width="625" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps?hl=fr&amp;ie=UTF8&amp;q=la+catine&amp;fb=1&amp;gl=fr&amp;hq=la+catine&amp;cid=0,0,8598411878000133392&amp;ll=48.870509,2.342352&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe><br /><small><a href="http://maps.google.fr/maps?hl=fr&amp;ie=UTF8&amp;q=la+catine&amp;fb=1&amp;gl=fr&amp;hq=la+catine&amp;cid=0,0,8598411878000133392&amp;ll=48.870509,2.342352&amp;spn=0.006295,0.006295&amp;t=m&amp;source=embed" style="color:#0000FF;text-align:left">Agrandir le plan</a></small>
+
+  .four.columns
+    - if !news.empty?
+      %h4 Dernières nouvelles
       %ul
-        %li
-          %a{href:"http://nod-a.com/"} Nod-a
-        %li
-          %a{href:"https://stormz.me/"} Stormz
-        %li
-          %a{href:"http://siliconsentier.org/"} Silicon Sentier
+        - news.each do |article|
+          %li
+            %h5
+              %a{href: article.path}= article[:title]
+            %p= snippet(article)
 
-  %li
-    %section
-      %h1 Contact
-      %p
-        %a{class: 'small radius button', href:"mailto:contact@cocococamp.com"} contact@cocococamp.com
+.footer
+  .row
+    %hr
+    %ul.block-grid.four-up.mobile
+      %li
+        %section
+          %h4 Sponsors
+          %p
+            %a{href:"mailto:contact@cocococamp.com"} Contactez nous
+      %li
+        %section
+          %h4 Où ?
+          %p
+            La Cantine
+            %br
+            151 rue montmartre,
+            %br
+            passage des panoramas
+            %br
+            75002 Paris
+            %br
+            FRANCE
+
+      %li
+        %section
+          %h4 Organisateurs
+          %ul
+            %li
+              %a{href:"http://nod-a.com/"} Nod-a
+            %li
+              %a{href:"https://stormz.me/"} Stormz
+            %li
+              %a{href:"http://siliconsentier.org/"} Silicon Sentier
+
+      %li
+        %section
+          %h4 Contact
+          %p
+            %a{class: 'small radius button', href:"mailto:contact@cocococamp.com"} contact@cocococamp.com
