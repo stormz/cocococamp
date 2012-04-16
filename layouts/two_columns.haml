@@ -1,32 +1,21 @@
----
-title: Home
----
-
-.panel.vevent
-  %h1= site_name
-  %p.bigger
-    %span.summary Un barcamp sur la co-création, la co-conception, la co-?
-    le
-    %abbr.dtstart{title:'2012-05-04'} 4 mai
-    à
-    %span.location Paris.
-
-- if !news.empty?
-  %h2 News
-  %ul
-    - news.each do |article|
-      %li
-        %h3
-          %a{href: article.path}= article[:title]
-        %p= snippet(article)
-
-%ul.block-grid.four-up
-  %li
+.panel.vevent.compact
+  %h1
+    %a{href:'/'}= site_name
+    %span.smaller
+      %span.summary - Un barcamp sur la co-création, la co-conception, la co-?
+      le
+      %abbr.dtstart{title:'2012-05-04'} 4 mai
+      à
+      %span.location Paris.
+.row
+  .eight.columns
+    = yield
+  .four.columns
     %section
       %h1 Sponsors
       %p
         %a{href:"mailto:contact@cocococamp.com"} Contactez nous
-  %li
+
     %section
       %h1 Ou ?
       %p
@@ -40,7 +29,6 @@ title: Home
         %br
         FRANCE
 
-  %li
     %section
       %h1 Organisateurs
       %ul
@@ -51,7 +39,6 @@ title: Home
         %li
           %a{href:"http://siliconsentier.org/"} Silicon Sentier
 
-  %li
     %section
       %h1 Contact
       %p

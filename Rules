@@ -40,6 +40,7 @@ compile '/' do
   filter :haml
   filter :embed
   layout 'home'
+  layout 'default'
 end
 
 compile '*' do
@@ -48,6 +49,7 @@ compile '*' do
   else
     filter :embed
     filter :redcarpet
+    layout 'two_columns'
     layout 'default'
   end
 end
