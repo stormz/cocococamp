@@ -1,19 +1,7 @@
-.header
-  %h1
-    %a{href:'/'}
-      %img{src: "/images/cocococamp_logo.png"}
-
-  %h4.subheader
-    Un événement sur la co-création, la co-conception, la co-?
-    le
-    %abbr.dtstart{title:'2012-05-04'} 4 mai
-    à
-    %span.location Paris.
-    %hr
-
 .row
   .eight.columns.content
-    = yield
+    %article
+      = yield
   .four.columns
 
     %section
