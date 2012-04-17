@@ -11,17 +11,20 @@
 
   %body
     .container
-      %header.vevent
+      %header{itemscope:'', itemtype:'http://schema.org/Event'}
         %h1
           %a{href:'/'}
             %img{src: "/images/cocococamp_logo.png", alt: "CCCC"}
 
-        %h4.subheader.summary
-          Un événement sur la co-création, la co-conception, la co-?
+        %h4.subheader
+          %meta{itemprop: 'name',      content: site_name}
+          %meta{itemprop: 'url',       content: 'http://cocococamp.com/'}
+          %meta{itemprop: 'startDate', content:'2012-05-04'}
+          %span{itemprop: 'description'} Un événement sur la co-création, la co-conception, la co-?
           le
-          %abbr.dtstart{title:'2012-05-04'} 4 mai
+          %abbr{title:'2012-05-04'} 4 mai
           à
-          %span.location Paris.
+          %span{itemprop: 'location'} Paris.
         %hr
 
       = yield
