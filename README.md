@@ -1,4 +1,4 @@
-# CoCoCoCamp website
+# CococoCamp website
 
 ## Add a news
 
@@ -22,3 +22,7 @@ For example *content/news/1_first_news.md*:
 In production:
 
     NANOC_ENV=production nanoc compile
+
+## License
+
+MIT
