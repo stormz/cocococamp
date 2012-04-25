@@ -1,0 +1,9 @@
+- if !news.empty?
+  %h4 Dernières nouvelles
+  %hr
+  %ul
+    - news.each do |article|
+      %li
+        %h5
+          %a{href: article.path}= article[:title]
+        %p= snippet(article)

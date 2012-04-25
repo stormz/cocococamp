@@ -59,28 +59,6 @@ title: L'événement sur la co-création, la co-conception et la co-?...
     <iframe width="625" height="350" src="http://maps.google.fr/maps?hl=fr&amp;ie=UTF8&amp;q=la+catine&amp;fb=1&amp;gl=fr&amp;hq=la+catine&amp;cid=0,0,8598411878000133392&amp;ll=48.870509,2.342352&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe><br /><small><a href="http://maps.google.fr/maps?hl=fr&amp;ie=UTF8&amp;q=la+catine&amp;fb=1&amp;gl=fr&amp;hq=la+catine&amp;cid=0,0,8598411878000133392&amp;ll=48.870509,2.342352&amp;spn=0.006295,0.006295&amp;t=m&amp;source=embed" style="color:#0000FF;text-align:left">Agrandir le plan</a></small>
 
   .four.columns.sidebar
-    - if !news.empty?
-      %h4 Dernières nouvelles
-      %hr
-      %ul
-        - news.each do |article|
-          %li
-            %h5
-              %a{href: article.path}= article[:title]
-            %p= snippet(article)
-
-      %h4 Sponsors
-      %hr
-      %a{href:'http://www.fr.capgemini.com/services/technology_services/accelerateurs/solutions/accelerated_solution_environment/'}
-        %img.logo{src: "/images/ase_150px.png", alt: "ASE, L'art de l'accélération. Cap geminini"}
-      %a{href:'http://www.3ds.com/'}
-        %img.logo{src: "/images/3ds_150px.png", alt: "Dassault Systèmes"}
-
-      %h4 Organisateurs
-      %hr
-      %a{href:'http://nod-a.com/'}
-        %img.logo{src: "/images/noda_150px.png", alt: "Nod-a"}
-      %a{href:'http://siliconsentier.org/'}
-        %img.logo{src: "/images/siliconsentier_150px.png", alt: "Silicon Sentier"}
-      %a{href:'https://stormz.me'}
-        %img.logo{src: "/images/StormzLogo_150px.png", alt: "Stormz"}
+    = render 'news'
+    = render 'sponsors'
+    = render 'organizers'
