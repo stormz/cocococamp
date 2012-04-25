@@ -1,0 +1,104 @@
+---
+title: Programme
+---
+
+.row.programme
+  .eight.columns
+    %h2 Tables rondes, le programme
+    
+    %h4 Modération
+    %h6 Hélène Girard
+    %p De Silicon Xperience, laboratoire vivant de Silicon Sentier qui favorise la participation des utilisateurs dans des projets d'innovation.
+    %h6 Marie Noéline Viguié
+    %p Co-fondatrice de nod-A, spécialisée dans le design thinking et la conception de dispositifs collaboratifs directement producteurs d'innovation.
+    
+    %h4 
+      %span.label.green.radius 09h30
+      Accueil
+    
+    %h4 
+      %span.label.green.radius 10h00
+      Co-Co-Quoi, pour quoi et pour qui ?
+      
+    %h5.subheader Une première table ronde pour définir les concepts de ces différents "Co-?",  et mieux saisir quand et comment ils interviennent dans les différentes étapes de la collaboration en groupe, à la fois dans des collectifs informels et des entreprises structurées.
+    %hr
+    
+    %h6 Carole Lypsic
+    %p Chercheuse et fondatrice de Topos.
+
+    %h6 Thierry Weil (à valider)
+    %p Professeur associé au centre d’économie industrielle de l’École des Mines de Paris.
+    
+    %h6 Luis Barraud
+    %p de chez Utilisacteur, spécialiste du design de services.
+    
+    %h4 
+      %span.label.green.radius 10h50
+      Méthodes et processus collaboratifs, tour d’horizon et conditions d’utilisation
+      
+    %h5.subheader Un tour de plusieurs méthodes collaboratives, afin d'en identifier les contextes d'usage, les spécificités, ainsi que les avantages et les inconvénients.
+    %hr
+    
+    %h6 Sébastien Rocq
+    %p Facilitateur travaillant pour la méthode ASE, Accelerated Solution Environment, appartenant au groupe capgemini et accélérant la résolution de problématiques complexes.
+
+    %h6 Paul Richardet
+    %p Expert en structuration de communautés technologiques innovantes et co-fondateur de La Cantine.
+
+    %h6 Un des associés de Reliences
+    %p Une des structures françaises facilitatrice de la méthode LEGO SERIOUS PLAY.
+
+    %h6 Christian Vanizette
+    %p Co-fondateur de Makesense, réseau et plateforme facilitant la réalisation de projets d’entrepreneurs sociaux.
+    
+    %h4 
+      %span.label.green.radius 11h40
+      Enjeux et limites du collaboratif
+      
+    %h5.subheader Le développement de ces méthodes collaboratives est porteur de nombreux enjeux que ce soit en termes de processus et d’organisation au sens large, de changement des pratiques de travail plus classiques mais également d’enjeux juridiques importants. 
+    %h5.subheader Cette table ronde abordera tant les enjeux que les limites et les questions posées par cette vague collaborative.
+    %hr
+    
+    %h6 Adrienne Alix
+    %p De Wikimedia, abordera les rapports et les expériences de collaboration entre des grandes structures et wikimédia. 
+
+    %h6 Emile Gayoso
+    %p Doctorant au LATTS, menant des recherches sur les plateformes de co-innovation. 
+
+    %h6 Alexandre Eisenchteter
+    %p Co-fondateur de Stormz, plateforme d’idéation en ligne.
+
+  .four.columns.sidebar
+  
+    %section
+      .panel
+        %h4 Inscrivez-vous.
+        %p Les places sont limitées, inscrivez-vous sur le site de La Cantine pour être sur de pouvoir participer.
+        %p
+          %a{class: 'big radius button nice', href:"http://barcamp.org/w/page/52789204/CCCCamp"} Réservez votre place !
+          
+    - if !news.empty?
+      %h4 Dernières nouvelles
+      %hr
+      %ul
+        - news.each do |article|
+          %li
+            %h5
+              %a{href: article.path}= article[:title]
+            %p= snippet(article)
+          
+    %section
+      %h4 Sponsors
+      %hr
+      %a{href:'http://www.fr.capgemini.com/services/technology_services/accelerateurs/solutions/accelerated_solution_environment/'}
+        %img.logo{src: "/images/ase_150px.png", alt: "Capgemini ASE"}
+
+    %section
+      %h4 Organisateurs
+      %hr
+      %a{href:'http://nod-a.com/'}
+        %img.logo{src: "/images/noda_150px.png", alt: "Nod-a"}
+      %a{href:'http://siliconsentier.org/'}
+        %img.logo{src: "/images/siliconsentier_150px.png", alt: "Silicon Sentier"}
+      %a{href:'https://stormz.me'}
+        %img.logo{src: "/images/StormzLogo_150px.png", alt: "Stormz"}

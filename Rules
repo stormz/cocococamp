@@ -43,6 +43,28 @@ compile '/' do
   layout 'default'
 end
 
+compile '/news/*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :embed
+    filter :redcarpet
+    layout 'two_columns'
+    layout 'default'
+  end
+end
+
+compile '/pages/*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :haml
+    filter :embed
+    layout 'home'
+    layout 'default'
+  end
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items

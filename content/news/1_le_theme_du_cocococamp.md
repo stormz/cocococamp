@@ -1,5 +1,5 @@
 ---
-title: Le CococoCamp
+title: La CococoConf & le CococoCamp
 ---
 
 ## A propos du CococoCamp
